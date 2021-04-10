@@ -29,6 +29,10 @@ namespace Practice2.Controllers
             _studentList.Add(student);
             return student;
         }
-
+        [HttpGet]
+        public List<Student> GetStudents()
+        {
+            return _studentList;
+        }
     }
 }
