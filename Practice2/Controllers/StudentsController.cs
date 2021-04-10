@@ -47,5 +47,17 @@ namespace Practice2.Controllers
             }
             return student;
         }
+        [HttpDelete]
+        public Student DeleteStudent([FromBody] Student student)
+        {
+            for (int i = 0; i < _studentList.Count; i++)
+            {
+                if (_studentList[i].ID == student.ID)
+                {
+                    _studentList.RemoveAt(i);
+                }
+            }
+            return student;
+        }
     }
 }
