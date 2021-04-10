@@ -34,5 +34,18 @@ namespace Practice2.Controllers
         {
             return _studentList;
         }
+
+        [HttpPut]
+        public Student UpdateStudent([FromBody] Student student)
+        {
+            for (int i = 0; i < _studentList.Count; i++)
+            {
+                if (_studentList[i].ID == student.ID)
+                {
+                    _studentList[i] = student;
+                }
+            }
+            return student;
+        }
     }
 }
