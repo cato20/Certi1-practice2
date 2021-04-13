@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 namespace Practice2.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("/api/students")]
     public class StudentsController : ControllerBase
     {
         private List<Student> _studentList;
